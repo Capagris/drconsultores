@@ -1,0 +1,35 @@
+{
+  "name": "dr",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "color": "^2.0.1",
+    "email-validator": "^1.1.1",
+    "mobile-detect": "^1.4.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-ga": "^2.4.1",
+    "react-helmet": "^5.2.0",
+    "react-icons": "^2.2.7",
+    "react-input-mask": "^1.2.2",
+    "react-lazy-load": "^3.0.13",
+    "react-localization": "^0.1.7",
+    "react-render-html": "^0.6.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "react-scroll": "^1.7.6",
+    "react-scrolllock": "^2.0.1",
+    "react-svg-morph": "^0.2.1",
+    "react-waypoint": "^8.0.0",
+    "redux": "^3.7.2",
+    "video-react": "^0.9.4"
+  },
+  "scripts": {
+    "buildcss": "sass src/css/index.scss:src/index.css && autoprefixer-cli -o src/index.css src/index.css && cssnano src/index.css src/index.css",
+    "sass": "sass --watch src/css/index.scss:src/index.css",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

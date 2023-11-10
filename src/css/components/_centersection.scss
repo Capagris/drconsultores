@@ -1,0 +1,149 @@
+.center-section {
+  width: calc(100% - #{$padding-left * 2});
+  height: calc(100% - #{$menu-height });
+  top: $menu-height * 0.8;
+  @extend .cx;
+  z-index: 1000;
+  @include media((phone, phone-landscape)) {
+    width: 95%;
+    height: 100%;
+    top: 20px;
+  }
+  .center-section-cols {
+    width: calc(100% - 30px);
+    height: 100%;
+    @extend .cxy;
+    * {
+      font-family: "DINPro", sans-serif;
+    }
+    @include media((phone, phone-landscape)) {
+      top: 10px;
+      transform: translate(-50%, 0);
+    }
+    a {
+      cursor: pointer;
+    }
+    .col-cta {
+      width: 28%;
+      position: absolute;
+      z-index: 3;
+      background: $green;
+      text-align: center;
+      padding: 25px 0;
+      text-transform: uppercase;
+      color: $dark-gray;
+      font-weight: bolder;
+      letter-spacing: 2px;
+      font-size: 12px;
+      @extend .ta_q;
+      cursor: pointer;
+      bottom: 10%;
+      left: 65%;
+      transform: translateX(-50%);
+      span {
+        position: relative;
+        z-index: 2;
+      }
+      &::after {
+        content: "";
+        display: block;
+        background: $dark-gray;
+        width: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @extend .ta_q;
+      }
+      &:hover {
+        color: white;
+        &::after {
+          width: 100%;
+        }
+      }
+      @include media((phone, phone-landscape)) {
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        transform: translate(0);
+      }
+    }
+    .center-section-col {
+      height: 100%;
+      box-sizing: border-box;
+      position: absolute;
+      .col-img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $light-gray no-repeat center center;
+        background-size: cover;
+        @extend .ta_q;
+        &:hover {
+          transform: scale(1.01) !important;
+        }
+      }
+      &.first-col {
+        width: 65%;
+        @include media((phone, phone-landscape)) {
+          width: 100%;
+          height: 35%;
+        }
+      }
+      &.second-col {
+        width: 35%;
+        left: 65%;
+        z-index: 2;
+        box-sizing: border-box;
+        padding: 100px 0 0 40px;
+        @include media((phone, phone-landscape)) {
+          width: 100%;
+          height: 60%;
+          left: 0;
+          padding: 10px 0;
+          top: 35%;
+        }
+        .col-info {
+          width: 100%;
+          &-title {
+            font-size: 20px;
+            color: $dark-gray;
+            text-transform: uppercase;
+            font-weight: bolder;
+            line-height: 1.9;
+            letter-spacing: 4px;
+            @include media((phone, phone-landscape)) {
+              font-size: 16px;
+              letter-spacing: 2px;
+              line-height: 1.6;
+            }
+          }
+          &-description {
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 30px;
+            line-height: 2.1;
+            text-align: justify;
+            text-align-last: right;
+            .highlight {
+              color: $green;
+              text-transform: uppercase;
+            }
+
+            @include media((phone, phone-landscape)) {
+              font-size: 13px;
+              margin-top: 10px;
+              line-height: 1.8;
+            }
+
+            .highlight {
+              color: $green;
+            }
+          }
+        }
+      }
+    }
+  }
+}

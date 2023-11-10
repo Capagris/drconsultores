@@ -1,0 +1,17 @@
+.horizontal-logo {
+  width: $logo-width;
+  svg {
+    * {
+      fill: $green;
+      @extend .ta_q;
+    }
+  }
+}
+.full-logo {
+  width: 280px;
+  svg {
+    * {
+      fill: $dark-gray;
+    }
+  }
+}

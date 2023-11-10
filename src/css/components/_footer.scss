@@ -1,0 +1,135 @@
+footer {
+  width: 100%;
+  * {
+    color: $dark-gray;
+    font-family: "DinPro", sans-serif !important;
+  }
+  .footer-container {
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    background: $light-gray;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    a {
+      @extend .ta_q;
+      &:hover {
+        color: $green;
+      }
+    }
+    @include media((phone, phone-landscape)) {
+      width: 100%;
+    }
+    .submit-container {
+      margin-bottom: 0;
+      @include media((phone, phone-landscape)) {
+        margin-top: 20px;
+      }
+    }
+  }
+  .footer-logo {
+    width: 100%;
+    @extend .flex;
+    align-items: center;
+    justify-content: center;
+    .footer-logo-big {
+      width: 300px;
+      margin-top: 80px;
+      @include media((phone, phone-landscape)) {
+        width: 200px;
+      }
+    }
+    .footer-logo-circle {
+      width: $logo-width;
+      height: $logo-width;
+      position: relative;
+      background: $green;
+      border-radius: 50%;
+      svg {
+        width: 60%;
+        @extend .cxy;
+      }
+    }
+  }
+  .footer-form-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+  }
+  .footer-text {
+    margin: 50px auto;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 2px;
+    font-weight: 400;
+    width: 600px;
+    text-transform: uppercase;
+    @include media((phone, phone-landscape)) {
+      width: 95%;
+      font-size: 14px;
+    }
+  }
+  .footer-form-form {
+    width: 100%;
+    max-width: 900px;
+    margin: 100px auto 0;
+    @include media((phone, phone-landscape)) {
+      width: 100%;
+    }
+    form {
+      width: 100%;
+      .checkbox-container {
+        margin: 50px 0;
+        @include media((phone, phone-landscape)) {
+          margin: 5px 0;
+          .ch {
+            margin-top: 0;
+          }
+        }
+      }
+      .inputs-container {
+        width: 100%;
+        @extend .flex;
+        margin: 40px 0;
+        @include media((phone, phone-landscape)) {
+          flex-direction: column;
+          margin: 0;
+        }
+        .ic {
+          flex: 1;
+          box-sizing: border-box;
+          padding: 0 10px;
+          @include media((phone, phone-landscape)) {
+            margin: 15px 0;
+          }
+          label {
+            left: 10px;
+          }
+        }
+      }
+    }
+  }
+  .footer-copyright {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background: $green;
+    &-tr {
+      color: white;
+      text-align: center;
+      margin: 10px 0;
+      @include media((phone, phone-landscape)) {
+        line-height: 1.5;
+        font-size: 10px;
+      }
+      a {
+        text-decoration: underline;
+        @extend .ta_q;
+        &:hover {
+          color: $dark-gray;
+        }
+      }
+    }
+  }
+}

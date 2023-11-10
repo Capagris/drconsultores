@@ -1,0 +1,121 @@
+.simple-slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  .slides-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .slide,
+    .media-container,
+    .media-content-img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include media((phone, phone-landscape)) {
+        video {
+          display: none;
+        }
+        .video-binder {
+        }
+      }
+    }
+    .slide:not(.active) {
+      display: none;
+    }
+    .media-content-img {
+      background: no-repeat center center;
+      background-size: cover;
+    }
+  }
+  &-bar {
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding-left: 10%;
+    z-index: 2;
+    @include media((phone, phone-landscape)) {
+      width: 100%;
+      padding-left: 0;
+    }
+    .simple-slide-bar-numbers {
+      width: 100%;
+      @extend .flex;
+      .ssb-number {
+        background: $light-gray;
+        flex: 1;
+        color: $dark-gray;
+        font-family: "DinPro", sans-serif;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 34px 0;
+        font-size: 32px;
+        font-weight: 800;
+        @extend .ta_q;
+        position: relative;
+        @include media((phone, phone-landscape)) {
+          padding: 20px 0;
+          position: static;
+        }
+        &::after {
+          content: attr(data-title);
+          display: block;
+          width: auto;
+          white-space: nowrap;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          padding-bottom: 20px;
+          text-align: center;
+          transform: translate(-50%, -100%);
+          font-size: 16px;
+          opacity: 0;
+          text-transform: uppercase;
+          pointer-events: none;
+          color: white;
+          @include media((phone, phone-landscape)) {
+            width: 100%;
+            left: 0;
+            font-size: 14px;
+            transform: translate(0, -100%);
+          }
+        }
+        &::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 20px;
+          position: absolute;
+          top: 0;
+          pointer-events: none;
+          transform: translateY(-100%);
+          background: url("img/arrowdown.svg") no-repeat center center;
+          opacity: 0;
+          background-size: auto 10px;
+          @include media((phone, phone-landscape)) {
+            display: none;
+          }
+        }
+        &.active {
+          background: $green;
+          &::before,
+          &::after {
+            opacity: 1;
+          }
+        }
+        &.active,
+        &:hover {
+          background: $green;
+        }
+      }
+    }
+  }
+}

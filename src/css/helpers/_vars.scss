@@ -1,0 +1,40 @@
+/*
+*  Stylesheet de variables
+*
+*  1. Colores
+*  2. Fuentes
+*  3. Medidas
+*  4. Media Breakpoints
+*
+*/
+
+//-- 1. Colores --//
+$green: #bdd641;
+$light-gray: #f2f2f2;
+$dark-gray: #4d4d4d;
+
+//-- 2. Fuentes --//
+
+//-- 3. Medidas --//
+$animation-duration: 0.5s;
+$animation-duration-quick: $animation-duration / 2;
+$animation-timing-function: ease-out;
+$logo-width: 180px;
+$padding-left: 48px;
+$padding-top: 40px;
+$bigmargin: ($padding-left * 2) + 25px;
+
+//-- 3.1 Menu --//
+$main-menu-width: 60%;
+$menu-height: 147px;
+$menu-logo-width: $logo-width;
+$menu-zindex: 999;
+$burger-height: 25px;
+
+//-- 4. Media Breakpoints --//
+$phone-max-width: 480px;
+$tablet-max-width: 1000px;
+$laptop-max-width: 1920px;
+$tablet-min-width: $phone-max-width + 1;
+$laptop-min-width: $tablet-max-width + 1;
+$hires-min-width: $laptop-max-width + 1;

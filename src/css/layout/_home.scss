@@ -1,0 +1,111 @@
+#home-video {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  z-index: 9999;
+  #home-title {
+    width: 100%;
+    @extend .flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    div {
+      width: 100%;
+      font-size: 18px;
+      font-weight: 500;
+      color: $dark-gray;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    img {
+      width: 150px;
+      margin-top: 10px;
+    }
+  }
+  &-lightbox {
+    width: 700px;
+    box-sizing: border-box;
+    background: #f2f2f2;
+    @extend .cxy;
+    padding: 20px $padding-left;
+    @include media((phone, phone-landscape)) {
+      width: 100%;
+      height: 100%;
+    }
+    iframe {
+      @include media((phone, phone-landscape)) {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  }
+  #home-video-ctas {
+    width: 100%;
+    @extend .flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  #home-video-binder {
+    width: 100%;
+    @extend .flex;
+    justify-content: center;
+  }
+  #policy {
+    max-width: 560px;
+    margin: 10px auto 0;
+    color: #444;
+    font-size: 14px;
+  }
+  .home-video-cta {
+    width: 300px;
+    z-index: 3;
+    background: $green;
+    text-align: center;
+    padding: 15px 0;
+    text-transform: uppercase;
+    color: $dark-gray;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-size: 16px;
+    @extend .ta_q;
+    cursor: pointer;
+    position: relative;
+    span {
+      position: relative;
+      z-index: 2;
+    }
+    &::after {
+      content: "";
+      display: block;
+      background: $dark-gray;
+      width: 0;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      @extend .ta_q;
+    }
+    &:hover {
+      color: white !important;
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+div#home {
+  #home-logo {
+    width: $logo-width;
+    position: absolute;
+    top: $padding-top;
+    left: $padding-left;
+    z-index: 99;
+    @include media((phone, phone-landscape)) {
+      display: none !important;
+    }
+  }
+}

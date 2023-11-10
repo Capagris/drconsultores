@@ -1,0 +1,11 @@
+RewriteEngine On
+
+
+
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_HOST} !^localhost$
+RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+
+RewriteRule    ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$   index.html   [NC,L,QSA]
+RewriteRule    ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$   index.html   [NC,L,QSA]
+RewriteRule    ^([A-Za-z0-9-]+)/?$   index.html [NC,L,QSA]

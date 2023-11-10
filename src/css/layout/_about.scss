@@ -1,0 +1,20 @@
+#about {
+  .col-info-title {
+    transform: translateX(10%);
+    transition: transform 0.4s ease;
+  }
+  .col-info-description {
+    transition: transform 0.4s ease 0.2s;
+  }
+  .col-img {
+    transform: translateY(-10%);
+    transition: transform 0.6s ease;
+  }
+  &.active {
+    .col-img,
+    .col-info-title,
+    .col-info-description {
+      transform: none;
+    }
+  }
+}

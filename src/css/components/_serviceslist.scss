@@ -1,0 +1,198 @@
+.service-list {
+  width: 100%;
+  position: relative;
+  left: 0;
+  top: $menu-height * 0.8;
+  margin-bottom: $menu-height;
+  box-sizing: border-box;
+  @extend .flex;
+  padding: 0 48px 0 90px;
+  @include media((phone, phone-landscape)) {
+    top: 60px;
+    padding: 0 20px;
+  }
+  .service-list-col {
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+    .service-img-1,
+    .service-img-2 {
+      background: no-repeat center center;
+      background-size: cover;
+      background-color: $light-gray;
+    }
+    &.service-list-col-1 {
+      width: 60%;
+      @extend .flex;
+      flex-direction: column;
+      @include media((phone, phone-landscape)) {
+        width: 100%;
+      }
+      .list-title {
+        @extend .flex;
+        justify-content: flex-start;
+        font-family: "DinPro", sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        color: $dark-gray;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 40px 0;
+      }
+      .the-list,
+      .service-img-1,
+      .list-title {
+        box-sizing: border-box;
+      }
+      .service-img-1 {
+        width: 100%;
+        margin-top: 20px;
+        height: auto;
+      }
+      .the-list {
+      }
+      .the-list {
+        @extend .flex;
+        flex-direction: column;
+        .list {
+          width: 100%;
+          @extend .flex;
+          flex: 1;
+          align-items: flex-end;
+          margin-bottom: 20px;
+          * {
+            font-family: "DinPro", sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            color: $dark-gray;
+            letter-spacing: 2px;
+          }
+          .i {
+            width: 30px;
+            text-align: left;
+            display: none;
+          }
+          .ll {
+            flex: 1;
+          }
+        }
+      }
+    }
+    &.service-list-col-2 {
+      width: 40%;
+      height: 550px;
+      box-sizing: border-box;
+      position: relative;
+      margin-top: 50px;
+      @include media((phone, phone-landscape)) {
+        width: 100%;
+        height: 240px;
+        margin-top: 20px;
+      }
+      .helena {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        transform: translateY(90%);
+        img {
+          width: 200px;
+        }
+      }
+      .service-img-2 {
+        width: 95%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include media((phone, phone-landscape)) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.recent-projects {
+  width: 100%;
+  padding: 120px 20%;
+  box-sizing: border-box;
+  @include media((phone, phone-landscape)) {
+    padding: 20px;
+  }
+  .ctas {
+    width: 100%;
+    margin-top: 90px;
+    @extend .flex;
+    a {
+      display: block;
+      width: 48%;
+      @include media((phone, phone-landscape)) {
+        width: 95%;
+        margin: 10px 2.5% !important;
+      }
+      &:first-child {
+        margin-right: 2%;
+      }
+      &:last-child {
+        margin-left: 2%;
+      }
+    }
+    .cta {
+      box-sizing: border-box;
+      padding: 30px 50px;
+      background: $green;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: $dark-gray;
+      position: relative;
+      @extend .ta_q;
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 100%;
+        @extend .ta_q;
+        position: absolute;
+        top: 0;
+        background: $dark-gray;
+        left: 0;
+      }
+      span {
+        position: relative;
+        z-index: 2;
+      }
+      &:hover {
+        color: white;
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .title {
+    font-family: "DinPro", sans-serif;
+    color: $dark-gray;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  .project {
+    font-family: "DinPro", sans-serif;
+    color: $dark-gray;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+  .projects {
+    width: 100%;
+  }
+  .project {
+    width: 100%;
+  }
+}

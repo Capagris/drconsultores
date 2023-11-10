@@ -1,0 +1,93 @@
+* {
+  font-family: "DinPro Condensed", serif;
+}
+a,
+a:visited,
+a:hover,
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+/*
+* Fija el #wrapper principal
+*/
+#wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*
+* Helper de #container
+*/
+.container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 0;
+}
+/*
+* Helper de secciones
+*/
+.section {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  .bigbg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: no-repeat center center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+  }
+  &#expertisebinder-complex {
+    @include media((phone, phone-landscape)) {
+      display: none;
+    }
+  }
+}
+#loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background: $light-gray;
+  &::after {
+    content: "";
+    display: block;
+    width: 200px;
+    @extend .cxy;
+    height: 200px;
+    background: url("./img/monogramafooter.svg") no-repeat center center;
+    background-size: contain;
+  }
+  animation: fadeOut 0.5s ease 2s;
+  animation-fill-mode: both;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    top: -99999px;
+    left: -99999px;
+    height: 0;
+    display: none;
+  }
+}
