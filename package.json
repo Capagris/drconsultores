@@ -2,7 +2,7 @@
     "name": "dr",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://capagris.github.io/drconsultores",
+    "homepage": "https://drconsultores.com.mx",
     "dependencies": {
         "color": "^2.0.1",
         "email-validator": "^1.1.1",
